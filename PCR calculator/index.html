@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCR calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>PCR calculator</h1>
+    </header>
+    <main>
+        <section>
+            <label for="number-reactions">Number of reactions:</label>
+            <input type="number" id="number-reactions" name="number-reactions" min="1" placeholder="1">
+        </section>
+        <section>
+            <label for="DNA-vol">DNA template volume (μL):</label>
+            <input type="number" id="DNA-vol" name="DNA-vol" min="0.01" placeholder="1.0">
+        </section>
+        <section>
+            <label for="reaction-vol">Final volume (μL):</label>
+            <input type="number" id="reaction-vol" name="reaction-vol" min="10" placeholder="10">   
+        </section>       
+        <table>
+            <tr>
+              <td> </td>
+              <td>Inicial conc.</td>
+              <td> </td>
+              <td>Final conc.</td>
+              <td></td>
+            </tr>
+            <tr>
+                <td><label for="PCR-buffer-i">PCR buffer</label></td>
+                <td><input type="number" id="PCR-buffer-i" name="PCR-buffer-i" placeholder="10"></td>
+                <td class="unit">X</td>
+                <td><input type="number" id="PCR-buffer-f" name="PCR-buffer-f" placeholder="1"></td>
+                <td class="unit">X</td>
+            </tr>
+            <tr>
+                <td><label for="dNTPs-i">dNTPs</label></td>
+                <td><input type="number" id="dNTPs-i" name="dNTPs-i" placeholder="2.5"></td>
+                <td class="unit">mM</td>
+                <td><input type="number" id="dNTPs-f" name="dNTPs-f" placeholder="0.2"></td>
+                <td class="unit">mM</td>
+            </tr>
+            <tr>
+                <td><label for="primer-for-i">Forward primer</label></td>
+                <td><input type="number" id="primer-for-i" name="primer-for-i" placeholder="10"></td>
+                <td class="unit">μM</td>
+                <td><input type="number" id="primer-for-f" name="primer-for-f" placeholder="0.25"></td>
+                <td class="unit">μM</td>
+            </tr>
+            <tr>
+                <td><label for="primer-rev-i">Reverse primer</label></td>
+                <td><input type="number" id="primer-rev-i" name="primer-rev-i" placeholder="10"></td>
+                <td class="unit">μM</td>
+                <td><input type="number" id="primer-rev-f" name="primer-rev-f" placeholder="0.25"></td>
+                <td class="unit">μM</td>
+            </tr>
+            <tr>
+                <td><label for="MgCl2-i">MgCl<sub>2</sub></label></td>
+                <td><input type="number" id="MgCl2-i" name="MgCl2-i" placeholder="50"></td>
+                <td class="unit">mM</td>
+                <td><input type="number" id="MgCl2-f" name="MgCl2-f" placeholder="1.5"></td>
+                <td class="unit">mM</td>
+            </tr>
+            <tr>
+                <td><label for="Taq-pol-i"><em>Taq</em> pol.</label></td>
+                <td><input type="number" id="Taq-pol-i" name="Taq-pol-i" placeholder="5"></td>
+                <td class="unit">U/μL</td>
+                <td><input type="number" id="Taq-pol-f" name="Taq-pol-f" placeholder="5"></td>
+                <td class="unit">U/μL</td>
+            </tr>
+        </table>
+        <section><input type="button" id="calc-button" value="Calculate volumes"></section>
+    </main>
+    <footer>
+        <p>Desenvolvido por <strong>Mayara Batista.</strong></p>
+    </footer>
+    
+</body>
+</html>
